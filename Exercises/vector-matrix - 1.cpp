@@ -9,7 +9,7 @@ int main()
 	int iMatriz[2][2];
 	
 	// Indices para o for
-	int i = 0, j = 0;
+	int i, j;
 	
 	// Atribuir valores para a matriz
 	iMatriz[0][0] = 0;
@@ -25,15 +25,13 @@ int main()
 	cout << endl;
 	
 	// Solicita ao usuário valores para a matriz
-	for (i; i < 2; i++)
+	for (i = 0; i < 2; i++)
 	{
-		for (j; j < 2; j++)
+		for (j = 0; j < 2; j++)
 		{
 			cout << "Insira o valor para Matriz (" << i + 1 << ", " << j + 1 << "): ";
 			cin >> iMatriz[i][j];
 		}
-		// Reset do valor de j
-		j = 0;
 	}
 	
 	// Espaço para facilitar leitura
