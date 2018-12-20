@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 // Código para fazer input de strings no sistema
 // Esse código reconhece espaço entre as palavras
