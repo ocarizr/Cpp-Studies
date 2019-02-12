@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <iostream>
-
 // Exercício de uso de funções
 // Existem melhores praticas para executar as funções do programa
 // O objetivo é apenas usar funções para qualquer fim
@@ -9,7 +8,7 @@ using namespace std;
 
 int sqr(int iValue);
 int sum(int a, int b);
-bool greater(int a, int b);
+bool iGreater(int a, int b);
 
 int main()
 {
@@ -30,7 +29,7 @@ int main()
 	cout << "A soma " << iVal1 << " + " << iVal2 << " = " << sum(iVal1, iVal2) << endl;
 	
 	// Testa a função greater
-	if (greater(iVal1, iVal2))
+	if (iGreater(iVal1, iVal2))
 	{
 		cout << iVal1 << " eh maior que " << iVal2 << endl;
 	} else
@@ -54,12 +53,13 @@ int sum(int a, int b)
 	return (a + b);
 }
 
-bool greater(int a, int b)
+bool iGreater(int a, int b)
 {
 	if (a > b)
 	{
 		return true;
+	}else{	
+		return false;
 	}
-	
-	return false;
 }
+
