@@ -1,26 +1,24 @@
 #include <iostream>
 
-class single
+uint16_t g_number = 3;
+
+size_t counter()
 {
-	single() { std::cout << "Create" << std::endl; }
+	static size_t index = 0;
 
-	static single instance;
-
-public:
-	~single() { std::cout << "Destroy" << std::endl; }
-
-	inline static single getInstance() { return instance; }
-
-	inline void print() { std::cout << "Print" << std::endl; }
-};
+	return ++index;
+}
 
 int main()
 {
-	single *i = &single::getInstance();
+	uint16_t l_number = g_number;
 
-	i->print();
+	std::cout << l_number << std::endl;
 
-	single::getInstance().print();
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << counter() << std::endl;
+	}
 
 	return 0;
 }
