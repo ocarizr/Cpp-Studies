@@ -1,0 +1,3 @@
+﻿  Triple X Game.cpp
+D:\GitHub\Cpp-Studies\Exercises\Triple X Game\Triple X Game\Triple X Game.cpp(35,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Triple X Game.vcxproj -> D:\GitHub\Cpp-Studies\Exercises\Triple X Game\Debug\Triple X Game.exe
