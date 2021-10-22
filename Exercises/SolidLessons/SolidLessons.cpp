@@ -2,11 +2,6 @@
 //
 
 #include "pch.h"
-#include "framework.h"
-
-#include "functions.h"
-#include "SRP.h"
-#include "OCP.h"
 
 namespace SolidLessons
 {
@@ -18,5 +13,8 @@ namespace SolidLessons
 
 		OCP ocp;
 		ocp.Execute();
+
+		DIP dip;
+		dip.Execute();
 	}
 }

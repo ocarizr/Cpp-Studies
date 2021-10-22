@@ -24,21 +24,18 @@
     <ClInclude Include="functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SRP.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OCP.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DIP.h">
+    <ClInclude Include="Builder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SolidLessons.cpp">
+    <ClCompile Include="CreationalPatterns.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Builder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

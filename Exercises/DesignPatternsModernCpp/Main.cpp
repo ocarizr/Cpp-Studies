@@ -1,16 +1,11 @@
 
 #include "../SolidLessons/functions.h"
-
-void callSolidAPI();
+#include "../CreationalPatterns/functions.h"
 
 int main()
 {
-	callSolidAPI();
+	// SolidLessons::SolidFunctions();
+	CreationalPatterns::Run();
 
 	return 0;
-}
-
-void callSolidAPI()
-{
-	SolidLessons::SolidFunctions();
 }

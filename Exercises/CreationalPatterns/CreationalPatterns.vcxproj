@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f9b6dc10-8093-444a-842b-1b8a28b42252}</ProjectGuid>
-    <RootNamespace>SolidLessons</RootNamespace>
+    <ProjectGuid>{3259a2b0-fa62-41f6-93c6-2b97cd16ebb2}</ProjectGuid>
+    <RootNamespace>CreationalPatterns</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,21 +151,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="DIP.h" />
+    <ClInclude Include="Builder.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="functions.h" />
-    <ClInclude Include="OCP.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="SRP.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Builder.cpp" />
+    <ClCompile Include="CreationalPatterns.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SolidLessons.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

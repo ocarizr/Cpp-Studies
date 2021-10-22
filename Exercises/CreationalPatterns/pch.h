@@ -10,9 +10,4 @@
 // add headers that you want to pre-compile here
 #include "framework.h"
 
-#include "functions.h"
-#include "SRP.h"
-#include "OCP.h"
-#include "DIP.h"
-
 #endif //PCH_H
