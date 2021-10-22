@@ -27,6 +27,9 @@
     <ClInclude Include="SRP.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OCP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SolidLessons.cpp">

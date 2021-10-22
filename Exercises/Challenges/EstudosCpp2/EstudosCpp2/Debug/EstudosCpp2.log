@@ -1,3 +1,0 @@
-﻿  Main.cpp
-C:\Users\rafae\source\repos\EstudosCpp2\EstudosCpp2\Main.cpp(115,8): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
-  EstudosCpp2.vcxproj -> C:\Users\rafae\source\repos\EstudosCpp2\Debug\EstudosCpp2.exe

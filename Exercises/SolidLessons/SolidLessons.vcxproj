@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="functions.h" />
+    <ClInclude Include="OCP.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="SRP.h" />
   </ItemGroup>
