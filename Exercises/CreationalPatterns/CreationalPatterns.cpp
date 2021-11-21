@@ -3,10 +3,12 @@
 
 #include "pch.h"
 
+#include "Builder.h"
+
 namespace CreationalPatterns
 {
-	// TODO: This is an example of a library function
-	void Run()
-	{
-	}
+void Run()
+{
+    RunBuilder();
 }
+} // CreationalPatterns

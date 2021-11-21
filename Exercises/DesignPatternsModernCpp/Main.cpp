@@ -1,11 +1,11 @@
 
-#include "../SolidLessons/functions.h"
 #include "../CreationalPatterns/functions.h"
+#include "../SolidLessons/functions.h"
 
 int main()
 {
-	// SolidLessons::SolidFunctions();
-	CreationalPatterns::Run();
+    // SolidLessons::SolidFunctions();
+    CreationalPatterns::Run();
 
-	return 0;
+    return 0;
 }

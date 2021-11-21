@@ -1,0 +1,25 @@
+# Format Style Options - Created with Clang Power Tools
+---
+BasedOnStyle: Mozilla
+AccessModifierOffset: -4
+AllowShortBlocksOnASingleLine: Empty
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+BraceWrapping: 
+  AfterClass: false
+  AfterEnum: false
+  AfterFunction: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  IndentBraces: true
+  SplitEmptyRecord: true
+BreakBeforeBraces: Allman
+BreakInheritanceList: BeforeColon
+BreakConstructorInitializersBeforeComma: true
+ConstructorInitializerIndentWidth : 0
+ContinuationIndentWidth: 4
+Cpp11BracedListStyle: true
+IndentWidth: 4
+TabWidth: 4
+...

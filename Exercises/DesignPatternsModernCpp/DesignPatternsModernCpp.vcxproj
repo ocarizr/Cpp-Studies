@@ -142,6 +142,9 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CreationalPatterns\CreationalPatterns.vcxproj">
+      <Project>{3259a2b0-fa62-41f6-93c6-2b97cd16ebb2}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\SolidLessons\SolidLessons.vcxproj">
       <Project>{f9b6dc10-8093-444a-842b-1b8a28b42252}</Project>
     </ProjectReference>

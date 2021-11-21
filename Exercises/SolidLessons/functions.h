@@ -2,5 +2,5 @@
 
 namespace SolidLessons
 {
-	void SolidFunctions();
+void SolidFunctions();
 }

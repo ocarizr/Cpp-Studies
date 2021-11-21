@@ -2,5 +2,5 @@
 
 namespace CreationalPatterns
 {
-	void Run();
+void Run();
 }

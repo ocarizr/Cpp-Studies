@@ -5,16 +5,16 @@
 
 namespace SolidLessons
 {
-	// TODO: This is an example of a library function
-	void SolidFunctions()
-	{
-		SRP srp;
-		srp.Execute();
+// TODO: This is an example of a library function
+void SolidFunctions()
+{
+    SRP srp;
+    srp.Execute();
 
-		OCP ocp;
-		ocp.Execute();
+    OCP ocp;
+    ocp.Execute();
 
-		DIP dip;
-		dip.Execute();
-	}
+    DIP dip;
+    dip.Execute();
+}
 }
