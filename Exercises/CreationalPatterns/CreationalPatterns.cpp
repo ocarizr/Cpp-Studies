@@ -4,11 +4,15 @@
 #include "pch.h"
 
 #include "Builder.h"
+#include "BuilderFacade.h"
+#include "GroovyBuilder.h"
 
 namespace CreationalPatterns
 {
 void Run()
 {
     RunBuilder();
+    RunGroovyBuilder();
+    RunBuilderFacade();
 }
 } // CreationalPatterns

@@ -12,7 +12,6 @@ class HTMLElement
     std::vector<HTMLElement> elements;
     int indent_size = 4;
 
-public:
     HTMLElement() {}
     HTMLElement(const std::string& n, const std::string& c)
     : name(n)
@@ -20,11 +19,12 @@ public:
     {
     }
 
+public:
     void add_nested_element(const HTMLElement& e) { elements.push_back(e); }
     void add_nested_element(const std::string& e_name,
                             const std::string& e_content)
     {
-        elements.emplace_back(e_name, e_content);
+        elements.push_back(HTMLElement(e_name, e_content));
     }
 
     std::string str(const int indent = 0) const
@@ -47,6 +47,8 @@ public:
            << "\n";
         return ss.str();
     }
+
+    friend class HTMLBuilder;
 };
 
 class HTMLBuilder
