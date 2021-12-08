@@ -13,13 +13,16 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Builder Facade">
+    <Filter Include="Header Files\Builder">
+      <UniqueIdentifier>{ea49d1b2-8655-431c-a32e-451b2c986ba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Builder\Builder Facade">
       <UniqueIdentifier>{69915e84-d5d9-46b8-ae44-eaa450fd5037}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Builder Facade\Headers">
+    <Filter Include="Header Files\Builder\Builder Facade\Headers">
       <UniqueIdentifier>{8eb869ee-b50f-4a20-811d-4fa52edf4261}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Builder Facade\Sources">
+    <Filter Include="Header Files\Builder\Builder Facade\Sources">
       <UniqueIdentifier>{2f1367b2-bf1e-42c9-8380-fbca61952448}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -33,26 +36,26 @@
     <ClInclude Include="functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Builder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GroovyBuilder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Person.h">
-      <Filter>Header Files\Builder Facade\Headers</Filter>
+      <Filter>Header Files\Builder\Builder Facade\Headers</Filter>
     </ClInclude>
     <ClInclude Include="PersonAddressBuilder.h">
-      <Filter>Header Files\Builder Facade\Headers</Filter>
+      <Filter>Header Files\Builder\Builder Facade\Headers</Filter>
     </ClInclude>
     <ClInclude Include="PersonBuilder.h">
-      <Filter>Header Files\Builder Facade\Headers</Filter>
+      <Filter>Header Files\Builder\Builder Facade\Headers</Filter>
     </ClInclude>
     <ClInclude Include="PersonBuilderBase.h">
-      <Filter>Header Files\Builder Facade\Headers</Filter>
+      <Filter>Header Files\Builder\Builder Facade\Headers</Filter>
     </ClInclude>
     <ClInclude Include="PersonJobBuilder.h">
-      <Filter>Header Files\Builder Facade\Headers</Filter>
+      <Filter>Header Files\Builder\Builder Facade\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GroovyBuilder.h">
+      <Filter>Header Files\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="Builder.h">
+      <Filter>Header Files\Builder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -63,13 +66,13 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BuilderFacade.h">
-      <Filter>Header Files\Builder Facade</Filter>
+      <Filter>Header Files\Builder\Builder Facade</Filter>
     </ClCompile>
     <ClCompile Include="Person.cpp">
-      <Filter>Header Files\Builder Facade\Sources</Filter>
+      <Filter>Header Files\Builder\Builder Facade\Sources</Filter>
     </ClCompile>
     <ClCompile Include="PersonBuilderBase.cpp">
-      <Filter>Header Files\Builder Facade\Sources</Filter>
+      <Filter>Header Files\Builder\Builder Facade\Sources</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -3,6 +3,8 @@
 
 #include "pch.h"
 
+#include "functions.h"
+
 #include "Builder.h"
 #include "BuilderFacade.h"
 #include "GroovyBuilder.h"

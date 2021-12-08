@@ -30,12 +30,14 @@ public:
     std::string str(const int indent = 0) const
     {
         std::stringstream ss;
-        ss << std::string(indent_size * indent, ' ') << "<" << name << ">"
+        ss << std::string(static_cast<size_t>(indent_size * indent), ' ') << "<"
+           << name << ">"
            << "\n";
         if (content.size() > 0)
         {
-            ss << std::string(indent_size * (indent + 1), ' ') << content
-               << "\n";
+            ss << std::string(static_cast<size_t>(indent_size * (indent + 1)),
+                              ' ')
+               << content << "\n";
         }
 
         for (auto&& e : elements)
@@ -43,7 +45,8 @@ public:
             ss << e.str(indent + 1);
         }
 
-        ss << std::string(indent_size * indent, ' ') << "</" << name << ">"
+        ss << std::string(static_cast<size_t>(indent_size * indent), ' ')
+           << "</" << name << ">"
            << "\n";
         return ss.str();
     }
