@@ -16,12 +16,13 @@
 	// Triangle vertices coordinates
 GLfloat vertices[] =
 {
-	-0.5f,		-0.5f * float(sqrt(3)) / 3,		0.f, // Lower left corner
-	0.5f,		-0.5f * float(sqrt(3)) / 3,		0.f, // Lower right corner
-	0.f,		0.5f * float(sqrt(3)) * 2 / 3,	0.f, // Upper corner
-	-0.5f / 2,	0.5f * float(sqrt(3)) / 6,		0.f, // Inner left
-	0.5f / 2,	0.5f * float(sqrt(3)) / 6,		0.f, // Inner right
-	0.f,		-0.5f * float(sqrt(3)) / 3,		0.f // Inner down
+	//			VERTEX COORDINATES				/				COLORS			//
+	-0.5f,		-0.5f * float(sqrt(3)) / 3,		0.f,	0.8f,	0.3f,	0.02f,	// Lower left corner
+	0.5f,		-0.5f * float(sqrt(3)) / 3,		0.f,	0.8f,	0.3f,	0.02f,	// Lower right corner
+	0.f,		0.5f * float(sqrt(3)) * 2 / 3,	0.f,	1.0f,	0.6f,	0.32f,	// Upper corner
+	-0.5f / 2,	0.5f * float(sqrt(3)) / 6,		0.f,	0.9f,	0.45f,	0.17f,	// Inner left
+	0.5f / 2,	0.5f * float(sqrt(3)) / 6,		0.f,	0.9f,	0.45f,	0.17f,	// Inner right
+	0.f,		-0.5f * float(sqrt(3)) / 3,		0.f,	0.8f,	0.3f,	0.02f	// Inner down
 };
 
 GLuint indices[] =
@@ -73,11 +74,16 @@ void fnGlRenderer()
 
 	VertexBuffer vbo(vertices, sizeof(vertices));
 	ElementBuffer ebo(indices, sizeof(indices));
-	vao.LinkVertexBuffer(vbo, 0);
+	// Set attributes to read vertex position information out of the vertices array
+	vao.LinkAttribute(vbo, 0, 3, GL_FLOAT, 6 * sizeof(GLfloat), (void*)(0));
+	// Set attributes to read vertex color information out of the vertices array
+	vao.LinkAttribute(vbo, 1, 3, GL_FLOAT, 6 * sizeof(GLfloat), (void*)(3 * sizeof(GLfloat)));
 
 	vao.UnBind();
 	vbo.UnBind();
 	ebo.UnBind();
+
+	GLuint uniID = glGetUniformLocation(shader.ID, "scale");
 
 	// Bind both the VBO and VAO to 0, so that we don't accidentaly modify them
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -96,6 +102,8 @@ void fnGlRenderer()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		shader.Activate();
+		glUniform1f(uniID, 0.1f);
+
 		vao.Bind();
 
 		// Draw the triangle using the indices and the GL_TRIANGLES primitive

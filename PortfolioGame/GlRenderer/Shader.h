@@ -27,13 +27,16 @@ public:
 	void Delete();
 
 	void GetShaderSource(ShaderType type, std::string filename);
-
+	
 	[[nodiscard]] const bool IsCompiled() const { return m_compiled; }
 
 	GLuint ID = 0u;
 
 private:
 	constexpr GLuint TranslateShaderType(ShaderType type) const;
+	constexpr const char* ShaderTypeToStr(ShaderType type) const;
+
+	void CompileErrors(uint32_t shader, std::string type);
 
 	std::vector<std::pair<ShaderType, std::string>> m_shadersSource;
 	bool m_compiled = false;

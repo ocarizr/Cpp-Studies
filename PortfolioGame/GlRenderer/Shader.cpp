@@ -37,6 +37,7 @@ void Shader::Compile()
 		const char* source = sourcepair.second.c_str();
 		glShaderSource(shader, 1, &source, nullptr);
 		glCompileShader(shader);
+		CompileErrors(shader, ShaderTypeToStr(sourcepair.first));
 		shaders.push_back(shader);
 	}
 
@@ -51,6 +52,7 @@ void Shader::Compile()
 
 	// Wrap-up/Link all the shaders together into the shader program
 	glLinkProgram(ID);
+	CompileErrors(ID, "PROGRAM");
 
 	// Delete the now useless Vertex and Fragment Shader Objects
 	for (auto&& shader : shaders)
@@ -99,5 +101,45 @@ constexpr GLuint Shader::TranslateShaderType(ShaderType type) const
 		return GL_COMPUTE_SHADER;
 	case ShaderType::Geometry:
 		return GL_GEOMETRY_SHADER;
+	}
+}
+
+constexpr const char* Shader::ShaderTypeToStr(ShaderType type) const
+{
+	switch (type)
+	{
+	case ShaderType::Fragment:
+		return "FRAGMENT";
+	case ShaderType::Vertex:
+		return "VERTEX";
+	case ShaderType::Compute:
+		return "COMPUTE";
+	case ShaderType::Geometry:
+		return "GEOMETRY";
+	}
+}
+
+void Shader::CompileErrors(uint32_t shader, std::string type)
+{
+	GLint hasCompiled = 0;
+	char infoLog[1024];
+
+	if (type != "PROGRAM")
+	{
+		glGetShaderiv(shader, GL_COMPILE_STATUS, &hasCompiled);
+		if (hasCompiled == GL_FALSE)
+		{
+			glGetShaderInfoLog(shader, 1024, nullptr, infoLog);
+			std::cout << "SHADER_COMPILATION_ERROR for: " << type << "\n" << std::endl;
+		}
+	}
+	else
+	{
+		glGetProgramiv(shader, GL_LINK_STATUS, &hasCompiled);
+		if (hasCompiled == GL_FALSE)
+		{
+			glGetProgramInfoLog(shader, 1024, nullptr, infoLog);
+			std::cout << "SHADER_LINKING_ERROR for: " << type << "\n" << std::endl;
+		}
 	}
 }

@@ -5,11 +5,11 @@ VertexArray::VertexArray()
 	Generate();
 }
 
-void VertexArray::LinkVertexBuffer(VertexBuffer vbo, GLuint layout)
+void VertexArray::LinkAttribute(VertexBuffer vbo, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset)
 {
 	vbo.Bind();
 
-	glVertexAttribPointer(layout, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+	glVertexAttribPointer(layout, numComponents, type, GL_FALSE, stride, offset);
 	glEnableVertexAttribArray(layout);
 
 	vbo.UnBind();
